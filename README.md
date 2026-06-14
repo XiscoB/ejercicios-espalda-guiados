@@ -2,7 +2,7 @@
 
 Una aplicación web ligera y orientada al rendimiento, diseñada específicamente para ayudar a aliviar y prevenir dolores de espalda. Este proyecto nació como una herramienta personalizada para mi esposa, adaptando sus rutinas de ejercicios y descansos a su ciclo laboral específico (3 días de turno, 1 día libre).
 
-🔗 **[Ver Demo en Vivo (GitHub Pages)](https://xiscob.github.io/ejercicios-espalda-guiados/)** *(Recuerda actualizar este enlace cuando lo publiques)*
+🔗 **[Ver Demo en Vivo (GitHub Pages)](https://xiscob.github.io/ejercicios-espalda-guiados/)** 
 
 ## 💡 Motivación y Contexto
 
