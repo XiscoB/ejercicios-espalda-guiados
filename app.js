@@ -240,6 +240,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 for(let i = 0; i <= nextIndex; i++) {
                     allDots[i].classList.add('active');
                 }
+                
+                // Hacer scroll suave hacia arriba de la sección ciclo
+                document.getElementById('ciclo').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
@@ -266,6 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const mins = parseInt(e.currentTarget.getAttribute('data-mins'));
             if (!isNaN(mins)) {
                 startTimer(mins);
+                // Also expand the timer if it's collapsed so they can see it running
+                setTimerState(false);
             }
         });
     });
@@ -328,5 +333,58 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // -----------------------------------------
+    // Timer Collapse & Swipe Logic
+    // -----------------------------------------
+    const timerContainer = document.getElementById('timer-container');
+    const timerToggleBtn = document.getElementById('timer-toggle-btn');
+    const timerCloseBtn = document.getElementById('timer-close-btn');
+    const timerCardDOM = document.getElementById('timer-card');
+
+    function setTimerState(isCollapsed) {
+        if (!timerContainer || !timerToggleBtn) return;
+        if (isCollapsed) {
+            timerContainer.classList.add('collapsed');
+            timerToggleBtn.classList.add('visible');
+        } else {
+            timerContainer.classList.remove('collapsed');
+            timerToggleBtn.classList.remove('visible');
+        }
+        localStorage.setItem('timerCollapsed', isCollapsed ? 'true' : 'false');
+    }
+
+    // Initial load state
+    // Por defecto es true (oculto) a menos que explícitamente se haya guardado como false (abierto)
+    if (localStorage.getItem('timerCollapsed') === 'false') {
+        setTimerState(false);
+    } else {
+        setTimerState(true);
+    }
+
+    if (timerCloseBtn) {
+        timerCloseBtn.addEventListener('click', () => setTimerState(true));
+    }
+    if (timerToggleBtn) {
+        timerToggleBtn.addEventListener('click', () => setTimerState(false));
+    }
+
+    // Swipe gesture (Touch & Mouse)
+    let pointerStartX = 0;
+    let pointerEndX = 0;
+
+    if (timerCardDOM) {
+        timerCardDOM.addEventListener('pointerdown', e => {
+            pointerStartX = e.clientX;
+        }, { passive: true });
+
+        timerCardDOM.addEventListener('pointerup', e => {
+            pointerEndX = e.clientX;
+            // If swiped right by more than 40px
+            if (pointerEndX - pointerStartX > 40) {
+                setTimerState(true);
+            }
+        }, { passive: true });
+    }
 
 });

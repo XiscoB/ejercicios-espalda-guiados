@@ -174,7 +174,7 @@
                                         <div class="video-wrapper mt-2">
                                             <lite-youtube videoid="kWWr0vH8JN8" playlabel="Descompresión"></lite-youtube>
                                         </div>
-                                        <button class="btn primary btn-small w-full start-timer-inline radius-none mt-2" data-mins="5">⏱️ Iniciar 5 Minutos</button>
+                                        <button class="btn primary btn-small start-timer-inline mt-2" data-mins="5">⏱️ Iniciar 5m</button>
                                     </div>
                                 </div>
                             </div>
@@ -285,7 +285,7 @@
                                         <div class="video-wrapper mt-2">
                                             <lite-youtube videoid="nnYvSMTWSIY" playlabel="Puente"></lite-youtube>
                                         </div>
-                                        <button class="btn primary btn-small w-full start-timer-inline radius-none mt-2" data-mins="5">⏱️ Iniciar 5 Minutos</button>
+                                        <button class="btn primary btn-small start-timer-inline mt-2" data-mins="5">⏱️ Iniciar 5m</button>
                                     </div>
                                 </div>
                                 <div class="task-item glass-card">
@@ -298,7 +298,7 @@
                                         <div class="video-wrapper mt-2">
                                             <lite-youtube videoid="kWWr0vH8JN8" playlabel="Descompresión"></lite-youtube>
                                         </div>
-                                        <button class="btn primary btn-small w-full start-timer-inline radius-none mt-2" data-mins="5">⏱️ Iniciar 5 Minutos</button>
+                                        <button class="btn primary btn-small start-timer-inline mt-2" data-mins="5">⏱️ Iniciar 5m</button>
                                     </div>
                                 </div>
                             </div>
@@ -420,7 +420,7 @@
                                         <div class="video-wrapper mt-2">
                                             <lite-youtube videoid="kWWr0vH8JN8" playlabel="Descompresión"></lite-youtube>
                                         </div>
-                                        <button class="btn primary btn-small w-full start-timer-inline radius-none mt-2" data-mins="5">⏱️ Iniciar 5 Minutos</button>
+                                        <button class="btn primary btn-small start-timer-inline mt-2" data-mins="5">⏱️ Iniciar 5m</button>
                                     </div>
                                 </div>
                             </div>
@@ -552,9 +552,16 @@
         </footer>
     </div>
     
+    <!-- Floating Toggle Button for Timer -->
+    <button id="timer-toggle-btn" class="timer-toggle-btn visible" aria-label="Abrir temporizador">⏱️</button>
+
     <!-- Timer Section (Floating) -->
-    <section class="timer-section floating" id="timer-container" aria-label="Temporizador de Ejercicios">
-        <div class="glass-card timer-card">
+    <section class="timer-section floating collapsed" id="timer-container" aria-label="Temporizador de Ejercicios">
+        <div class="glass-card timer-card" id="timer-card">
+            <div class="timer-drag-handle">
+                <span>Desliza 👉 para ocultar</span>
+                <button id="timer-close-btn" class="timer-close-btn" aria-label="Cerrar temporizador">&times;</button>
+            </div>
             <h2>⏱️ Temporizador</h2>
             <div class="timer-controls">
                 <button id="btn-5m" class="btn primary">5 Min</button>
