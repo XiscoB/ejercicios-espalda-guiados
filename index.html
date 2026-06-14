@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutina de Espalda - Gina</title>
+    <meta name="description" content="Rutina interactiva para fortalecer y aliviar la espalda de Gina (Turnos 3x1).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.2/lite-yt-embed.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <nav class="main-nav">
+            <a href="#ciclo">Tu Ciclo</a>
+            <a href="#biblioteca">Biblioteca</a>
+            <a href="#progreso">Progreso</a>
+        </nav>
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Rutina de Espalda para Gina</h1>
+                <p>Plan adaptado a tu ciclo de 3 días de trabajo y 1 día libre en la residencia.</p>
+            </div>
+            <div class="hero-glow"></div>
+        </header>
+
+        <main>
+
+            <!-- Wizard Section -->
+            <section class="schedule-section wizard-section" id="ciclo">
+                <div class="section-header text-center">
+                    <h2>¿Qué día de tu ciclo es hoy?</h2>
+                    <p>Selecciona tu día actual para ver tu plan interactivo.</p>
+                </div>
+                
+                <!-- Day Selector Buttons -->
+                <div class="wizard-tabs">
+                    <button class="wizard-tab active" data-day="1">Día 1<br><small>Fuerza</small></button>
+                    <button class="wizard-tab" data-day="2">Día 2<br><small>Descarga</small></button>
+                    <button class="wizard-tab" data-day="3">Día 3<br><small>Core</small></button>
+                    <button class="wizard-tab free-day" data-day="4">Día 4<br><small>Libre</small></button>
+                </div>
+
+                <!-- Content Container -->
+                <div class="wizard-content-container glass-card">
+                    <!-- DAY 1 -->
+                    <div class="wizard-day active" id="day-1">
+                        <div class="step-indicator">
+                            <div class="step-dot active clickable" data-step="1">1. Antes de trabajar</div>
+                            <div class="step-line"></div>
+                            <div class="step-dot clickable" data-step="2">2. En el descanso</div>
+                            <div class="step-line"></div>
+                            <div class="step-dot clickable" data-step="3">3. Tarde</div>
+                        </div>
+                        
+                        <!-- Step 1 -->
+                        <div class="step-content active" id="day-1-step-1">
+                            <h3>🌅 Antes de trabajar</h3>
+                            <p class="mb-4">Activación rápida y recordatorio postural para preparar el cuerpo.</p>
+                            
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Bisagra de Cadera (10 reps)</h4>
+                                        <p>Automatiza el agacharte bien sin peso.</p>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="p9glu-ATMx8" playlabel="Bisagra"></lite-youtube>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Press Pallof (2 series/lado)</h4>
+                                        <p>Despierta la faja abdominal.</p>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="dHxa57kBAmc" playlabel="Pallof"></lite-youtube>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <div></div>
+                                <button class="btn primary next-step">Siguiente →</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="step-content" id="day-1-step-2">
+                            <h3>☕ En el descanso</h3>
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Estirar cuello y hombros</h4>
+                                        <p>Aprovecha para estirar suavemente el cuello y mover los hombros hacia atrás.</p>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Recordatorio para el turno</h4>
+                                        <p>Flexiona SIEMPRE las rodillas al manipular a los residentes. Mantén el peso pegado al cuerpo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <button class="btn secondary prev-step">← Atrás</button>
+                                <button class="btn primary next-step">Siguiente →</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div class="step-content" id="day-1-step-3">
+                            <h3>🏡 Rutina de Tarde: Fuerza</h3>
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Bici Suave (5m)</h4>
+                                        <button class="btn primary btn-small start-timer-inline mt-2" data-mins="5">⏱️ Iniciar 5m</button>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Peso Muerto Rumano (3x12)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="9j_L1KgpK8Y" playlabel="Peso Muerto"></lite-youtube>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Remo en Banco (3x10)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="pJ3AYX_M1L4" playlabel="Remo"></lite-youtube>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Descompresión Lumbar (5m)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="kWWr0vH8JN8" playlabel="Descompresión"></lite-youtube>
+                                        </div>
+                                        <button class="btn primary btn-small w-full start-timer-inline radius-none mt-2" data-mins="5">⏱️ Iniciar 5 Minutos</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <button class="btn secondary prev-step">← Atrás</button>
+                                <button class="btn primary finish-day">¡Día Completado! 🎉</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DAY 2 -->
+                    <div class="wizard-day" id="day-2">
+                        <div class="step-indicator">
+                            <div class="step-dot active clickable" data-step="1">1. Antes de trabajar</div>
+                            <div class="step-line"></div>
+                            <div class="step-dot clickable" data-step="2">2. En el descanso</div>
+                            <div class="step-line"></div>
+                            <div class="step-dot clickable" data-step="3">3. Tarde</div>
+                        </div>
+                        
+                        <div class="step-content active" id="day-2-step-1">
+                            <h3>🌅 Antes de trabajar</h3>
+                            <p class="mb-4">Mismos ejercicios que el Día 1.</p>
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Bisagra de Cadera (10 reps)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="p9glu-ATMx8" playlabel="Bisagra"></lite-youtube>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Press Pallof (2 series/lado)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="dHxa57kBAmc" playlabel="Pallof"></lite-youtube>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <div></div>
+                                <button class="btn primary next-step">Siguiente →</button>
+                            </div>
+                        </div>
+                        
+                        <div class="step-content" id="day-2-step-2">
+                            <h3>☕ En el descanso</h3>
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Hidratación</h4>
+                                        <p>Bebe mucha agua e hidrata esos discos intervertebrales.</p>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Recordatorio para el turno</h4>
+                                        <p>Sigue agachándote con las piernas. La espalda recta.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <button class="btn secondary prev-step">← Atrás</button>
+                                <button class="btn primary next-step">Siguiente →</button>
+                            </div>
+                        </div>
+                        
+                        <div class="step-content" id="day-2-step-3">
+                            <h3>🏡 Rutina de Tarde: Descarga Activa</h3>
+                            <p class="highlight-text mb-4">Hoy NO se tocan las pesas. Es día de limpiar tensión.</p>
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Bici moderada (15m)</h4>
+                                        <p>Para bombear sangre nueva.</p>
+                                        <button class="btn primary btn-small start-timer-inline mt-2" data-mins="15">⏱️ Iniciar 15m</button>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Puente de Pilates (5m)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="nnYvSMTWSIY" playlabel="Puente"></lite-youtube>
+                                        </div>
+                                        <button class="btn primary btn-small w-full start-timer-inline radius-none mt-2" data-mins="5">⏱️ Iniciar 5 Minutos</button>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Descompresión Lumbar (5m)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="kWWr0vH8JN8" playlabel="Descompresión"></lite-youtube>
+                                        </div>
+                                        <button class="btn primary btn-small w-full start-timer-inline radius-none mt-2" data-mins="5">⏱️ Iniciar 5 Minutos</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <button class="btn secondary prev-step">← Atrás</button>
+                                <button class="btn primary finish-day">¡Día Completado! 🎉</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DAY 3 -->
+                    <div class="wizard-day" id="day-3">
+                        <div class="step-indicator">
+                            <div class="step-dot active clickable" data-step="1">1. Antes de trabajar</div>
+                            <div class="step-line"></div>
+                            <div class="step-dot clickable" data-step="2">2. En el descanso</div>
+                            <div class="step-line"></div>
+                            <div class="step-dot clickable" data-step="3">3. Tarde</div>
+                        </div>
+                        
+                        <div class="step-content active" id="day-3-step-1">
+                            <h3>🌅 Antes de trabajar</h3>
+                            <p class="mb-4">Último empujón del ciclo. Despierta el abdomen.</p>
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Bisagra de Cadera (10 reps)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="p9glu-ATMx8" playlabel="Bisagra"></lite-youtube>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Press Pallof (2 series/lado)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="dHxa57kBAmc" playlabel="Pallof"></lite-youtube>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <div></div>
+                                <button class="btn primary next-step">Siguiente →</button>
+                            </div>
+                        </div>
+                        
+                        <div class="step-content" id="day-3-step-2">
+                            <h3>☕ En el descanso</h3>
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4 style="color: var(--accent-danger)">Último tirón</h4>
+                                        <p>Tu cuerpo está más fatigado hoy. Extrema precauciones al levantar peso.</p>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Sentadillas suaves</h4>
+                                        <p>Haz 5 sentadillas suaves en el aire para soltar la cadera si estuviste mucho de pie.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <button class="btn secondary prev-step">← Atrás</button>
+                                <button class="btn primary next-step">Siguiente →</button>
+                            </div>
+                        </div>
+                        
+                        <div class="step-content" id="day-3-step-3">
+                            <h3>🏡 Rutina de Tarde: Core Fuerte</h3>
+                            <p class="highlight-text mb-4">Fortaleciendo la faja protectora de la columna:</p>
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Bici Suave (5m)</h4>
+                                        <button class="btn primary btn-small start-timer-inline mt-2" data-mins="5">⏱️ Iniciar 5m</button>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Press Pallof intenso (3x10 por lado)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="dHxa57kBAmc" playlabel="Pallof"></lite-youtube>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Descompresión Lumbar (5m)</h4>
+                                        <div class="video-wrapper mt-2">
+                                            <lite-youtube videoid="kWWr0vH8JN8" playlabel="Descompresión"></lite-youtube>
+                                        </div>
+                                        <button class="btn primary btn-small w-full start-timer-inline radius-none mt-2" data-mins="5">⏱️ Iniciar 5 Minutos</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <button class="btn secondary prev-step">← Atrás</button>
+                                <button class="btn primary finish-day">¡Día Completado! 🎉</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DAY 4 (Free) -->
+                    <div class="wizard-day" id="day-4">
+                        <div class="step-content active">
+                            <h3 style="color: var(--accent-danger)">🛋️ Día de Descanso Total</h3>
+                            <p class="mb-4">El cuerpo necesita este día para resetearse antes del siguiente ciclo.</p>
+                            <div class="interactive-checklist">
+                                <div class="task-item glass-card" style="border-color: var(--accent-danger)">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4 style="color: var(--accent-danger)">Cero pesas</h4>
+                                        <p>Prohibido usar las pesas o el banco. Hoy la columna descansa de compresión vertical.</p>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Descanso Activo</h4>
+                                        <p>Dar un paseo a buen ritmo (30-40 min) es ideal para desentumecer la espalda sin cargarla.</p>
+                                    </div>
+                                </div>
+                                <div class="task-item glass-card">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" class="task-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="task-content">
+                                        <h4>Terapia de Calor</h4>
+                                        <p>Si hay mucha tensión, aplica calor en la zona lumbar (esterilla eléctrica) durante 15 minutos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-actions">
+                                <div></div>
+                                <button class="btn danger finish-day">¡Disfrutar el descanso! 🎉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Biblioteca de Videos -->
+            <section class="schedule-section" id="biblioteca">
+                <div class="section-header">
+                    <h2>📺 Biblioteca Completa</h2>
+                    <p>Si quieres consultar algún video individualmente, aquí los tienes todos.</p>
+                </div>
+                <div class="exercises-grid">
+                    <article class="exercise-card glass-card">
+                        <div class="video-container"><lite-youtube videoid="kWWr0vH8JN8" playlabel="Descompresión"></lite-youtube></div>
+                        <div class="card-content">
+                            <h3>Descompresión Lumbar</h3>
+                            <p>Técnicas pasivas para relajar la musculatura y quitar presión a los discos vertebrales después de un turno duro.</p>
+                        </div>
+                    </article>
+
+                    <article class="exercise-card glass-card">
+                        <div class="video-container"><lite-youtube videoid="p9glu-ATMx8" playlabel="Bisagra"></lite-youtube></div>
+                        <div class="card-content">
+                            <h3>Bisagra de Cadera (Hip Hinge)</h3>
+                            <p>Antes de usar peso, automatiza el agacharte doblando la cadera y no las lumbares.</p>
+                        </div>
+                    </article>
+
+                    <article class="exercise-card glass-card">
+                        <div class="video-container"><lite-youtube videoid="9j_L1KgpK8Y" playlabel="Peso Muerto"></lite-youtube></div>
+                        <div class="card-content">
+                            <h3>Peso Muerto Rumano</h3>
+                            <p>Fortalece glúteos e isquiotibiales ("amortiguadores"). Bajar lento, subir apretando glúteos.</p>
+                        </div>
+                    </article>
+
+                    <article class="exercise-card glass-card">
+                        <div class="video-container"><lite-youtube videoid="pJ3AYX_M1L4" playlabel="Remo"></lite-youtube></div>
+                        <div class="card-content">
+                            <h3>Remo a una mano en banco</h3>
+                            <p>Revierte los "hombros caídos". Apoya mano y rodilla para que la espalda baja descanse.</p>
+                        </div>
+                    </article>
+
+                    <article class="exercise-card glass-card">
+                        <div class="video-container"><lite-youtube videoid="dHxa57kBAmc" playlabel="Pallof"></lite-youtube></div>
+                        <div class="card-content">
+                            <h3>Press Pallof (Banda elástica)</h3>
+                            <p>El mejor ejercicio para evitar hernias al girar a pacientes. Faja abdominal natural.</p>
+                        </div>
+                    </article>
+
+                    <article class="exercise-card glass-card">
+                        <div class="video-container"><lite-youtube videoid="nnYvSMTWSIY" playlabel="Puente"></lite-youtube></div>
+                        <div class="card-content">
+                            <h3>Puente de Pilates</h3>
+                            <p>Sube y baja cadera vértebra a vértebra. Alivia tensiones e hidrata los discos.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Progreso Section -->
+            <section class="schedule-section" id="progreso">
+                <div class="section-header">
+                    <h2>📈 Evolución tras 4 Ciclos (16 días)</h2>
+                    <p>Este gráfico muestra cómo el dolor se reduce al no sobreentrenar y respetar el Día 2 como descarga.</p>
+                </div>
+                <div class="glass-card chart-wrapper">
+                    <canvas id="progressChart"></canvas>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer>
+            <p>Constancia y no forzar los pesos al principio. ¡Tú puedes, Gina! 💪</p>
+        </footer>
+    </div>
+    
+    <!-- Timer Section (Floating) -->
+    <section class="timer-section floating" id="timer-container" aria-label="Temporizador de Ejercicios">
+        <div class="glass-card timer-card">
+            <h2>⏱️ Temporizador</h2>
+            <div class="timer-controls">
+                <button id="btn-5m" class="btn primary">5 Min</button>
+                <button id="btn-10m" class="btn primary">10 Min</button>
+                <button id="btn-15m" class="btn primary">15 Min</button>
+                <button id="btn-stop" class="btn danger" style="display: none;">Detener</button>
+            </div>
+            <div class="timer-display" id="timer-display">00:00</div>
+        </div>
+    </section>
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Subir arriba">↑</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.2/lite-yt-embed.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
